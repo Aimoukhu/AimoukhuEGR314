@@ -825,40 +825,82 @@
   <h1>Module's Requirements</h1>
 
 <h2 id="module-requirements">Module Requirements</h2>
-<p>The following sections document the requirements that the this module need to fulfills to .....</p>
+<p>For this project, I am responsible for the IMU (Inertial Measurement Unit) sensor module. The IMU will be used to measure motion and orientation of the underwater rover. It provides information such as acceleration and rotation and is fundamental to any device that tracks how its moving in 3d space. This module will be used to help keep the vehicle stable and support navigation.</p>
 <table>
 <thead>
 <tr>
 <th><strong>Requirement Description</strong></th>
 <th><strong>Measure of<br> Threshold</strong></th>
 <th><strong>Target<br>Measure</strong></th>
-<th style="text-align: center;"><strong>Stretch<br>Requirement<br>(Y-N)</strong></th>
+<th><strong>Stretch<br>Requirement<br>(Y-N)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Surface mounted, 3.3V switching power regulatore</td>
+<td>Surface mounted, 3.3V switching power regulator</td>
 <td>3.2 Volts</td>
 <td>3.3 Volts</td>
-<td style="text-align: center;">No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>Surface mounted microcontroller</td>
 <td>1 PIC or ESP</td>
 <td>8-bit PIC</td>
-<td style="text-align: center;">No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>Wireless Communication</td>
 <td>Able to send or receive a Wi-Fi data</td>
 <td>Send and receive Wi-Fi Data to MQTT</td>
-<td style="text-align: center;">Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td><em>Rest are items your modules needs to support the task you are covering for the team's device.</em></td>
-<td>---</td>
-<td>---</td>
-<td style="text-align: center;"><strong>NO</strong></td>
+<td>I2C Communication Interface</td>
+<td>I²C communication</td>
+<td>I²C with selectable address</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Shared Power Rail</td>
+<td>3.2 volts</td>
+<td>3.3 volts</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Sample rate for sensor readings</td>
+<td>10 Hz</td>
+<td>50 Hz or higher</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Data transmission to MCU and HMI</td>
+<td>Serial UART at 9600 baud</td>
+<td>I2C AND wireless transmission</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Calibration Capability</td>
+<td>Manual one-time calibration</td>
+<td>Automatic calibration on startup</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>IMU Sensor</td>
+<td>6-axis (accelerometer + gyroscope)</td>
+<td>9-axis (accel + gyro + magnetometer)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Orientation Accuracy</td>
+<td>±5 degrees for pitch/roll</td>
+<td>±2 degrees for pitch/roll</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Orientation Output</td>
+<td>Raw sensor data output</td>
+<td>Sensor fusion (pitch, roll)</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>

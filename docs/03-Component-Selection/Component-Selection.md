@@ -75,7 +75,7 @@ Rationale: The AP63203WU-7 is a inexpensive option that meets the SMD requiremen
 
 2. TDK InvenSense ICM-20948
 
-    ![](IMU2.png)
+    ![](IMU.png)
 
     * $6.78/each
     * [link to product](https://www.digikey.com/en/products/detail/tdk-invensense/ICM-20948/6623535)
@@ -132,7 +132,7 @@ Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis se
 
 3. PIC18F57Q43
 
-    ![](MCU3.png)
+    ![](MCU.png)
 
     * $2.14/each
     * [link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426)

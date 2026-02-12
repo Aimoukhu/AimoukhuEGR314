@@ -622,27 +622,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
+  <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
+      MicroController
     </span>
   </a>
   
@@ -870,27 +852,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
+  <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
+      MicroController
     </span>
   </a>
   
@@ -932,53 +896,14 @@
 <p><strong>For each of the following sections, use <ins>one of the two styles</ins> given near the end. <em>REMOVE THIS NOTE</em></strong></p>
 </blockquote>
 <h3 id="power-management">Power Management</h3>
-<p>(<strong>remove this note/placeholder</strong>: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} <strong>THAT WERE SELECTED</strong>)</p>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management">"Appendix - Component Selection Process - Power Mangement"</a> selection.</p>
-<h3 id="sensor">Sensor</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your  <strong>SELECTED</strong> sensor is shown. Otherwise, remove this section.)</p>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor">"Appendix - Component Selection Process - Sensor"</a> selection.</p>
-<h3 id="actuator">Actuator</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your <strong>Selected</strong> the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)</p>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator">"Appendix - Component Selection Process - Actuator"</a> selection.</p>
-<hr>
-<blockquote>
-<p>Remove the following before submitting! Use them to present the selected components</p>
-</blockquote>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
-<p><strong>External Clock Module</strong></p>
+<p><strong>3.3 Volt Switching Regulator</strong></p>
 <ol>
 <li>
-<p>XC1259TR-ND surface mount crystal</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<p>LM2575T-3.3</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../REG1.png" data-desc-position="bottom"><img alt="" src="../REG1.png"></a></p>
 <ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></li>
+<li>$2.51/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700">link to product</a></li>
 </ul>
 <table>
 <thead>
@@ -990,21 +915,273 @@
 <tbody>
 <tr>
 <td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td>Lower efficiency vs modern regulators</td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
+<td>Wide input voltage range</td>
+<td>Physically large (older TO-220 package)</td>
+</tr>
+<tr>
+<td>Fixed 3.3V output</td>
+<td>Does not meet surface mount constraint</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>LM43603PWPT</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../REG2.png" data-desc-position="bottom"><img alt="" src="../REG2.png"></a></p>
+<ul>
+<li>$5.22/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM43603PWPT/4832849?s=N4IgTCBcDaIDIFkAsBmAbABhQBQOrYBUQBdAXyA">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compact SMD footprint for space limited PCB's</td>
+<td>Requires external passives to produce 3.3V</td>
+</tr>
+<tr>
+<td>Adjustable voltage output</td>
+<td>None fixed-output creates risk of incorrect resistor sizing.</td>
 </tr>
 <tr>
 <td>Meets surface mount constraint of project</td>
-<td></td>
+<td>Large output current (&gt;2A) will lead to heating</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>AP63203WU-7</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../REG3.png" data-desc-position="bottom"><img alt="" src="../REG3.png"></a></p>
+<ul>
+<li>$0.71/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extremely Cheap</td>
+<td>Harder to mount on board than larger models</td>
+</tr>
+<tr>
+<td>Fixed 3.3V with small form factor</td>
+<td>Long Manufacturer Lead Time</td>
+</tr>
+<tr>
+<td>Large maximum input voltage (40V)</td>
+<td>Lower operating temperature than similar models</td>
 </tr>
 </tbody>
 </table>
 </li>
 </ol>
-<p><strong>Rationale:</strong> A clock oscillator is easier ...</p>
+<p>Selected Model: AP63203WU-7
+Rationale: The AP63203WU-7 is a inexpensive option that meets the SMD requirements and provides a fixed 3.3V output on a large range on voltage inputs.</p>
+<h3 id="sensor">Sensor</h3>
+<p><strong>Inertia Measurement Unit</strong></p>
+<ol>
+<li>
+<p>Bosch Sensortec BNO055</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../IMU1.png" data-desc-position="bottom"><img alt="" src="../IMU1.png"></a></p>
+<ul>
+<li>$12.34/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/bosch-sensortec/BNO055/6136301">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboard Sensor Fusion</td>
+<td>Not recommended for new designs (NRND)</td>
+</tr>
+<tr>
+<td>Includes 3-axis magnetometer</td>
+<td>More expensive than similar counterparts.</td>
+</tr>
+<tr>
+<td>Meets surface mount constraint of project</td>
+<td>Higher current draw vs 6-axis models</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>TDK InvenSense ICM-20948</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../IMU2.png" data-desc-position="bottom"><img alt="" src="../IMU2.png"></a></p>
+<ul>
+<li>$6.78/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/tdk-invensense/ICM-20948/6623535">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inexpensive compaared to other 9-axis</td>
+<td>Slightly more setup/computation than BNO05 to get sensor fusion output</td>
+</tr>
+<tr>
+<td>I²C interface and simple register map</td>
+<td>Datasheet / supply status sometimes NRND</td>
+</tr>
+<tr>
+<td>Meets surface mount constraint of project</td>
+<td>More expensive than 6-axis model</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>TDK InvenSense MPU-6050</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../IMU3.png" data-desc-position="bottom"><img alt="" src="../IMU3.png"></a></p>
+<ul>
+<li>$4.8/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/tdk-invensense/MPU-6050/4038009">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extremely Cheap</td>
+<td>Aging/obsolete status. No more support</td>
+</tr>
+<tr>
+<td>Abundant community libraries for integration with chip</td>
+<td>No built-in magnetometer. No absolute direction (north)</td>
+</tr>
+<tr>
+<td>Meets surface mount constraint of project</td>
+<td>Lower performance / higher drift than modern 9-axis parts.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>Selected Model: TDK InvenSense ICM-20948
+Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis sensing with power consumption while allowing full control over sensor fusion and I²C communication with the microcontroller . It is also half as expensive and significantly easier to implement that the the BNO055.</p>
+<h3 id="microcontroller">MicroController</h3>
+<ol>
+<li>
+<p>ESP32s</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MCU1.png" data-desc-position="bottom"><img alt="" src="../MCU1.png"></a></p>
+<ul>
+<li>$4.99/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rich peripheral set</td>
+<td>Lower efficiency vs modern regulators</td>
+</tr>
+<tr>
+<td>Large developer ecosystem and component library</td>
+<td>Physically large (older TO-220 package)</td>
+</tr>
+<tr>
+<td>Integrated Wi-Fi + BLE</td>
+<td>Does not meet surface mount constraint</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>PIC18F47K42</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../REG2.png" data-desc-position="bottom"><img alt="" src="../REG2.png"></a></p>
+<ul>
+<li>$2.69/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM43603PWPT/4832849?s=N4IgTCBcDaIDIFkAsBmAbABhQBQOrYBUQBdAXyA">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ultra-low power consumption</td>
+<td>No wireless connectivity</td>
+</tr>
+<tr>
+<td>Small and cheap</td>
+<td>Low memory and no DSP hardware</td>
+</tr>
+<tr>
+<td>Meets surface mount constraint of project</td>
+<td>Smaller ecosystem than ESP32</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>PIC18F57Q43</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MCU3.png" data-desc-position="bottom"><img alt="" src="../MCU3.png"></a></p>
+<ul>
+<li>$2.14/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Better peripherals than other PIC18</td>
+<td>Still 8-bit performance limits</td>
+</tr>
+<tr>
+<td>Multiple Communication Interfaces</td>
+<td>No integrated Wi-Fi</td>
+</tr>
+<tr>
+<td>Improved Analog Capability than other PIC's</td>
+<td>Memory limits</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>Selected Model: ESP32S
+Rationale: The ESP32S is built with IMU support that is vital for my sensor subsystem. It also a 32 bit microcontroller and will have greater processing power for calculating IMU sensor fusion than its 8 bit counterparts.</p>
 
 
 

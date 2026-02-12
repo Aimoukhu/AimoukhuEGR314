@@ -51,7 +51,7 @@ The following sections are the selected major components necessary for  .....
     | Fixed 3.3V with small form factor | Long Manufacturer Lead Time                     |
     | Large maximum input voltage (40V) | Lower operating temperature than similar models |
 
-Selected Model: AP63203WU-7
+Selected Model: AP63203WU-7<br>
 Rationale: The AP63203WU-7 is a inexpensive option that meets the SMD requirements and provides a fixed 3.3V output on a large range on voltage inputs.
 
 
@@ -99,7 +99,7 @@ Rationale: The AP63203WU-7 is a inexpensive option that meets the SMD requiremen
     | Abundant community libraries for integration with chip | No built-in magnetometer. No absolute direction (north)    |
     | Meets surface mount constraint of project              | Lower performance / higher drift than modern 9-axis parts. |
 
-Selected Model: TDK InvenSense ICM-20948
+Selected Model: TDK InvenSense ICM-20948<br>
 Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis sensing with power consumption while allowing full control over sensor fusion and I²C communication with the microcontroller . It is also half as expensive and significantly easier to implement that the the BNO055.
 
 ### MicroController
@@ -143,5 +143,5 @@ Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis se
     | Multiple Communication Interfaces           | No integrated Wi-Fi            |
     | Improved Analog Capability than other PIC's | Memory limits                  |
 
-Selected Model: ESP32S
+Selected Model: ESP32S<br>
 Rationale: The ESP32S is built with IMU support that is vital for my sensor subsystem. It also a 32 bit microcontroller and will have greater processing power for calculating IMU sensor fusion than its 8 bit counterparts.

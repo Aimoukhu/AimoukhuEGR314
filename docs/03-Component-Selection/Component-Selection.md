@@ -10,56 +10,138 @@ The following sections are the selected major components necessary for  .....
 
 ### Power Management
 
-(**remove this note/placeholder**: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} **THAT WERE SELECTED**)
+**3.3 Volt Switching Regulator**
 
-For more details, review the ["Appendix - Component Selection Process - Power Mangement"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management) selection.
+1. LM2575T-3.3
+
+    ![](REG1.png)
+
+    * $2.51/each
+    * [link to product](https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700)
+
+    | Pros                     | Cons                                    |
+    |--------------------------|-----------------------------------------|
+    | Inexpensive              | Lower efficiency vs modern regulators   |
+    | Wide input voltage range | Physically large (older TO-220 package) |
+    | Fixed 3.3V output        | Does not meet surface mount constraint  |
+
+2. LM43603PWPT
+
+    ![](REG2.png)
+
+    * $5.22/each
+    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM43603PWPT/4832849?s=N4IgTCBcDaIDIFkAsBmAbABhQBQOrYBUQBdAXyA)
+
+    | Pros                                          | Cons                                                         |
+    |-----------------------------------------------|--------------------------------------------------------------|
+    | Compact SMD footprint for space limited PCB's | Requires external passives to produce 3.3V                   |
+    | Adjustable voltage output                     | None fixed-output creates risk of incorrect resistor sizing. |
+    | Meets surface mount constraint of project     | Large output current (>2A) will lead to heating              |
+
+3. AP63203WU-7
+
+    ![](REG3.png)
+
+    * $0.71/each
+    * [link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426)
+
+    | Pros                              | Cons                                            |
+    |-----------------------------------|-------------------------------------------------|
+    | Extremely Cheap                   | Harder to mount on board than larger models     |
+    | Fixed 3.3V with small form factor | Long Manufacturer Lead Time                     |
+    | Large maximum input voltage (40V) | Lower operating temperature than similar models |
+
+Selected Model: AP63203WU-7
+Rationale: The AP63203WU-7 is a inexpensive option that meets the SMD requirements and provides a fixed 3.3V output on a large range on voltage inputs.
+
+
 
 ### Sensor
 
-(**remove this note/placeholder**: if applicable, this is where your  **SELECTED** sensor is shown. Otherwise, remove this section.)
+**Inertia Measurement Unit**
 
-For more details, review the ["Appendix - Component Selection Process - Sensor"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor) selection.
+1. Bosch Sensortec BNO055
 
-### Actuator
+    ![](IMU1.png)
 
-(**remove this note/placeholder**: if applicable, this is where your **Selected** the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)
+    * $12.34/each
+    * [link to product](https://www.digikey.com/en/products/detail/bosch-sensortec/BNO055/6136301)
 
-For more details, review the ["Appendix - Component Selection Process - Actuator"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator) selection.
+    | Pros                         | Cons                                      |
+    |------------------------------|-------------------------------------------|
+    | Onboard Sensor Fusion        | Not recommended for new designs (NRND)    |
+    | Includes 3-axis magnetometer | More expensive than similar counterparts. |
+    | Meets surface mount constraint of project | Higher current draw vs 6-axis models
 
------------
-> Remove the following before submitting! Use them to present the selected components
+2. TDK InvenSense ICM-20948
 
-### Style 1
+    ![](IMU2.png)
 
-> This is the example found in the assignment, uses more html
+    * $6.78/each
+    * [link to product](https://www.digikey.com/en/products/detail/tdk-invensense/ICM-20948/6623535)
 
-*Table 1: Example component selection*
+    | Pros                                  | Cons                                                                   |
+    |---------------------------------------|------------------------------------------------------------------------|
+    | Inexpensive compaared to other 9-axis | Slightly more setup/computation than BNO05 to get sensor fusion output |
+    | I²C interface and simple register map | Datasheet / supply status sometimes NRND                               |
+    | Meets surface mount constraint of project | More expensive than 6-axis model
 
-**External Clock Module**
+3. TDK InvenSense MPU-6050
 
-| **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
+    ![](IMU3.png)
 
-**Rationale:** A clock oscillator is easier ....
+    * $4.8/each
+    * [link to product](https://www.digikey.com/en/products/detail/tdk-invensense/MPU-6050/4038009)
 
-### Style 2
+    | Pros                                                   | Cons                                                       |
+    |--------------------------------------------------------|------------------------------------------------------------|
+    | Extremely Cheap                                        | Aging/obsolete status. No more support                     |
+    | Abundant community libraries for integration with chip | No built-in magnetometer. No absolute direction (north)    |
+    | Meets surface mount constraint of project              | Lower performance / higher drift than modern 9-axis parts. |
 
-> Also acceptable, more markdown friendly
+Selected Model: TDK InvenSense ICM-20948
+Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis sensing with power consumption while allowing full control over sensor fusion and I²C communication with the microcontroller . It is also half as expensive and significantly easier to implement that the the BNO055.
 
-**External Clock Module**
+### MicroController
 
-1. XC1259TR-ND surface mount crystal
+1. ESP32s
 
-    ![](image1.png)
+    ![](MCU1.png)
 
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
+    * $4.99/each
+    * [link to product](https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700)
 
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
+    | Pros                     | Cons                                    |
+    |--------------------------|-----------------------------------------|
+    | Rich peripheral set              | Lower efficiency vs modern regulators   |
+    | Large developer ecosystem and component library | Physically large (older TO-220 package) |
+    | Integrated Wi-Fi + BLE        | Does not meet surface mount constraint  |
 
-**Rationale:** A clock oscillator is easier ...
+2. PIC18F47K42
+
+    ![](REG2.png)
+
+    * $2.69/each
+    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM43603PWPT/4832849?s=N4IgTCBcDaIDIFkAsBmAbABhQBQOrYBUQBdAXyA)
+
+    | Pros                                      | Cons                           |
+    |-------------------------------------------|--------------------------------|
+    | Ultra-low power consumption               | No wireless connectivity       |
+    | Small and cheap                           | Low memory and no DSP hardware |
+    | Meets surface mount constraint of project | Smaller ecosystem than ESP32   |
+
+3. PIC18F57Q43
+
+    ![](MCU3.png)
+
+    * $2.14/each
+    * [link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426)
+
+    | Pros                                        | Cons                           |
+    |---------------------------------------------|--------------------------------|
+    | Better peripherals than other PIC18         | Still 8-bit performance limits |
+    | Multiple Communication Interfaces           | No integrated Wi-Fi            |
+    | Improved Analog Capability than other PIC's | Memory limits                  |
+
+Selected Model: ESP32S
+Rationale: The ESP32S is built with IMU support that is vital for my sensor subsystem. It also a 32 bit microcontroller and will have greater processing power for calculating IMU sensor fusion than its 8 bit counterparts.

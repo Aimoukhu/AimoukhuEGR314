@@ -109,7 +109,7 @@ Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis se
     ![](MCU1.png)
 
     * $4.99/each
-    * [link to product](https://www.digikey.com/en/products/detail/onsemi/LM2575T-3-3G/1476700)
+    * [link to product](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)
 
     | Pros                     | Cons                                    |
     |--------------------------|-----------------------------------------|

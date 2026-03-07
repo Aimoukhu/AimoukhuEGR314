@@ -99,8 +99,8 @@ Rationale: The AP63203WU-7 is a inexpensive option that meets the SMD requiremen
     | Abundant community libraries for integration with chip | No built-in magnetometer. No absolute direction (north)    |
     | Meets surface mount constraint of project              | Lower performance / higher drift than modern 9-axis parts. |
 
-Selected Model: TDK InvenSense ICM-20948<br>
-Rationale: The ICM-20948 is a strong choice because it provides modern 9-axis sensing with power consumption while allowing full control over sensor fusion and I²C communication with the microcontroller . It is also half as expensive and significantly easier to implement that the the BNO055.
+Selected Model: Bosch Sensortec BNO055<br>
+Rationale: The BNO055 is a strong choice because it provides modern 9-axis sensing with power consumption while allowing full control over sensor fusion and I²C communication with the microcontroller . It also has extensive research and a library database making it easy to use and debug.
 
 ### MicroController
 

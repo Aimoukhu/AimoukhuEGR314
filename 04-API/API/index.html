@@ -966,47 +966,288 @@
 </tbody>
 </table>
 <h2 id="imu-subsystem-downstream-requests">IMU Subsystem Downstream Requests</h2>
-<p><strong>Message Type 2 -- Request Motor Speed</strong>
-|               |    Byte 1    |      Byte 2      |    Byte 3    |      Byte 4       |      Byte 5       |     Byte 6      |
-|:-------------:|:------------:|:----------------:|:------------:|:-----------------:|:-----------------:|:---------------:|
-| Variable Name | Message_Type | Subsystem_Number | Motor_Number | Upper Motor_Speed | Lower Motor_Speed | Motor_Direction |
-| Variable Type |   uint8_t    |     uint8_t      |   uint8_t    |      uint8_t      |      uint8_t      |     uint8_t     |
-|   Min Value   |      2       |        3         |      0       |         0         |         0         |        0        |
-|   Max Value   |      2       |        3         |      1       |        15         |        15         |        1        |
-|    Example    |      2       |        3         |      1       |         4         |         4         |        1        |</p>
-<p><strong>Message Type 3 -- Request Rover Orientation</strong>
-|               |    Byte 1    |      Byte 2      |  Byte 3   |  Byte 4   |   Byte 5    |   Byte 6    |   Byte 7   |   Byte 8   |
-|:-------------:|:------------:|:----------------:|:---------:|:---------:|:-----------:|:-----------:|:----------:|:----------:|
-| Variable Name | Message_Type | Subsystem_Number | yaw_upper | yaw_lower | pitch_upper | pitch_lower | roll_upper | roll_lower |
-| Variable Type |   uint8_t    |     uint8_t      |  int8_t   |  int8_t   |   int8_t    |   int8_t    |   int8_t   |   int8_t   |
-|   Min Value   |      3       |        3         |    -90    |    -90    |     -90     |     -90     |    -180    |    -180    |
-|   Max Value   |      3       |        3         |    225    |    90     |     90      |     90      |    180     |    180     |
-|    Example    |      3       |        3         |     4     |     4     |      8      |      0      |     9      |      1     |</p>
-<p><strong>Message Type 13 -- Request Subsystem Status</strong>
-|               |    Byte 1    |      Byte 2      | 
-|:-------------:|:------------:|:----------------:|
-| Variable Name | message_type | subsystem_Number | 
-| Variable Type |   uint8_t    |     uint8_t      |
-|   Min Value   |      13      |        3         |  <br>
-|   Max Value   |      13      |        3         | 
-|    Example    |      13      |        3         |  </p>
+<p><strong>Message Type 2 -- Request Motor Speed</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Variable Name</td>
+<td style="text-align: center;">Message_Type</td>
+<td style="text-align: center;">Subsystem_Number</td>
+<td style="text-align: center;">Motor_Number</td>
+<td style="text-align: center;">Upper Motor_Speed</td>
+<td style="text-align: center;">Lower Motor_Speed</td>
+<td style="text-align: center;">Motor_Direction</td>
+</tr>
+<tr>
+<td style="text-align: center;">Variable Type</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+</tr>
+<tr>
+<td style="text-align: center;">Min Value</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">Max Value</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Example</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Message Type 3 -- Request Rover Orientation</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+<th style="text-align: center;">Byte 8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Variable Name</td>
+<td style="text-align: center;">Message_Type</td>
+<td style="text-align: center;">Subsystem_Number</td>
+<td style="text-align: center;">yaw_upper</td>
+<td style="text-align: center;">yaw_lower</td>
+<td style="text-align: center;">pitch_upper</td>
+<td style="text-align: center;">pitch_lower</td>
+<td style="text-align: center;">roll_upper</td>
+<td style="text-align: center;">roll_lower</td>
+</tr>
+<tr>
+<td style="text-align: center;">Variable Type</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">int8_t</td>
+</tr>
+<tr>
+<td style="text-align: center;">Min Value</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-90</td>
+<td style="text-align: center;">-90</td>
+<td style="text-align: center;">-90</td>
+<td style="text-align: center;">-90</td>
+<td style="text-align: center;">-180</td>
+<td style="text-align: center;">-180</td>
+</tr>
+<tr>
+<td style="text-align: center;">Max Value</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">225</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">180</td>
+</tr>
+<tr>
+<td style="text-align: center;">Example</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Message Type 13 -- Request Subsystem Status</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Variable Name</td>
+<td style="text-align: center;">message_type</td>
+<td style="text-align: center;">subsystem_Number</td>
+</tr>
+<tr>
+<td style="text-align: center;">Variable Type</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+</tr>
+<tr>
+<td style="text-align: center;">Min Value</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Max Value</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Example</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
 <h2 id="imu-subsystem-upstream-request">IMU Subsystem Upstream Request</h2>
-<p><strong>Message Type 14 - Subsystem Error Response</strong>
-|               |    Byte 1    |    Byte 2     |    Byte 3    |    Byte 4    |    Byte 5    |
-|:-------------:|:------------:|:-------------:|:------------:|:------------:|:------------:|
-| Variable Name | message_type | Source_Number | Upper_Number | Lower_Number | Description  |
-| Variable Type |   uint8_t    |    uint8_t    |    int8_t    |   uint8_t    |    Char[]    |
-|   Min Value   |      14      |       3       |      0       |      0       |     Null     |
-|   Max Value   |      14      |       3       |      10      |      10      | Byte 8 - 61  |
-|    Example    |      14      |       3       |      1       |      4       | Not Detected |</p>
-<p><strong>Message Type 15 - Subsystem Status Response</strong>
-|               |    Byte 1    |    Byte 2     |    Byte 3    |    Byte 4    |    Byte 5    |
-|:-------------:|:------------:|:-------------:|:------------:|:------------:|:------------:|
-| Variable Name | message_type | Source_Number | Upper_Number | Lower_Number | Description  |
-| Variable Type |   uint8_t    |    uint8_t    |    int8_t    |   uint8_t    |    Char[]    |
-|   Min Value   |      14      |       3       |      0       |      0       |     Null     |
-|   Max Value   |      14      |       3       |      10      |      10      | Byte 8 - 61  |
-|    Example    |      14      |       3       |      1       |      8       | Calibrating |</p>
+<p><strong>Message Type 14 - Subsystem Error Response</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Variable Name</td>
+<td style="text-align: center;">message_type</td>
+<td style="text-align: center;">Source_Number</td>
+<td style="text-align: center;">Upper_Number</td>
+<td style="text-align: center;">Lower_Number</td>
+<td style="text-align: center;">Description</td>
+</tr>
+<tr>
+<td style="text-align: center;">Variable Type</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">Char[]</td>
+</tr>
+<tr>
+<td style="text-align: center;">Min Value</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Null</td>
+</tr>
+<tr>
+<td style="text-align: center;">Max Value</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Byte 8 - 61</td>
+</tr>
+<tr>
+<td style="text-align: center;">Example</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Not Detected</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Message Type 15 - Subsystem Status Response</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Variable Name</td>
+<td style="text-align: center;">message_type</td>
+<td style="text-align: center;">Source_Number</td>
+<td style="text-align: center;">Upper_Number</td>
+<td style="text-align: center;">Lower_Number</td>
+<td style="text-align: center;">Description</td>
+</tr>
+<tr>
+<td style="text-align: center;">Variable Type</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">int8_t</td>
+<td style="text-align: center;">uint8_t</td>
+<td style="text-align: center;">Char[]</td>
+</tr>
+<tr>
+<td style="text-align: center;">Min Value</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Null</td>
+</tr>
+<tr>
+<td style="text-align: center;">Max Value</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Byte 8 - 61</td>
+</tr>
+<tr>
+<td style="text-align: center;">Example</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Calibrating</td>
+</tr>
+</tbody>
+</table>
 
 
 

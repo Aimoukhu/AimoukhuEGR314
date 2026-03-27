@@ -20,6 +20,7 @@ The IMU subsystem can transmit information such as orientation (yaw, pitch, and 
 ## IMU Subsystem Downstream Requests
 
 **Message Type 2 -- Request Motor Speed**
+
 |               |    Byte 1    |      Byte 2      |    Byte 3    |      Byte 4       |      Byte 5       |     Byte 6      |
 |:-------------:|:------------:|:----------------:|:------------:|:-----------------:|:-----------------:|:---------------:|
 | Variable Name | Message_Type | Subsystem_Number | Motor_Number | Upper Motor_Speed | Lower Motor_Speed | Motor_Direction |
@@ -29,6 +30,7 @@ The IMU subsystem can transmit information such as orientation (yaw, pitch, and 
 |    Example    |      2       |        3         |      1       |         4         |         4         |        1        |
 
 **Message Type 3 -- Request Rover Orientation**
+
 |               |    Byte 1    |      Byte 2      |  Byte 3   |  Byte 4   |   Byte 5    |   Byte 6    |   Byte 7   |   Byte 8   |
 |:-------------:|:------------:|:----------------:|:---------:|:---------:|:-----------:|:-----------:|:----------:|:----------:|
 | Variable Name | Message_Type | Subsystem_Number | yaw_upper | yaw_lower | pitch_upper | pitch_lower | roll_upper | roll_lower |
@@ -38,6 +40,7 @@ The IMU subsystem can transmit information such as orientation (yaw, pitch, and 
 |    Example    |      3       |        3         |     4     |     4     |      8      |      0      |     9      |      1     |
 
 **Message Type 13 -- Request Subsystem Status**
+
 |               |    Byte 1    |      Byte 2      | 
 |:-------------:|:------------:|:----------------:|
 | Variable Name | message_type | subsystem_Number | 
@@ -50,6 +53,7 @@ The IMU subsystem can transmit information such as orientation (yaw, pitch, and 
 ## IMU Subsystem Upstream Request
 
 **Message Type 14 - Subsystem Error Response**
+
 |               |    Byte 1    |    Byte 2     |    Byte 3    |    Byte 4    |    Byte 5    |
 |:-------------:|:------------:|:-------------:|:------------:|:------------:|:------------:|
 | Variable Name | message_type | Source_Number | Upper_Number | Lower_Number | Description  |
@@ -59,6 +63,7 @@ The IMU subsystem can transmit information such as orientation (yaw, pitch, and 
 |    Example    |      14      |       3       |      1       |      4       | Not Detected |
 
 **Message Type 15 - Subsystem Status Response**
+
 |               |    Byte 1    |    Byte 2     |    Byte 3    |    Byte 4    |    Byte 5    |
 |:-------------:|:------------:|:-------------:|:------------:|:------------:|:------------:|
 | Variable Name | message_type | Source_Number | Upper_Number | Lower_Number | Description  |

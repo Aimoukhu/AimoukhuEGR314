@@ -6,7 +6,6 @@ title: Module's Selected Major Components
 
 The following sections are the selected major components necessary for  .....
 
->**For each of the following sections, use <ins>one of the two styles</ins> given near the end. *REMOVE THIS NOTE***
 
 ### Power Management
 

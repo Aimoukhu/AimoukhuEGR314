@@ -31,17 +31,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aimoukhu.github.io/AimoukhuEGR314/07-Schematic/schematic/</loc>
+         <loc>https://aimoukhu.github.io/AimoukhuEGR314/06-PCB/pcb/</loc>
+         <lastmod>2026-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aimoukhu.github.io/AimoukhuEGR314/07-Power-Budget/Power-Budget/</loc>
+         <lastmod>2026-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aimoukhu.github.io/AimoukhuEGR314/08-Reflection/Reflection/</loc>
+         <lastmod>2026-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aimoukhu.github.io/AimoukhuEGR314/08-Schematic/schematic/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://aimoukhu.github.io/AimoukhuEGR314/Appendix/</loc>
-         <lastmod>2026-05-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://aimoukhu.github.io/AimoukhuEGR314/Appendix/01-Componet-Selection/Component-Selection-Process/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -52,11 +62,6 @@
     </url>
     <url>
          <loc>https://aimoukhu.github.io/AimoukhuEGR314/Appendix/02-Microcontroller-Selection/pic-table/</loc>
-         <lastmod>2026-05-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://aimoukhu.github.io/AimoukhuEGR314/Appendix/03-Power-Budget/Power-Budget/</loc>
          <lastmod>2026-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>

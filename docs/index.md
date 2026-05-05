@@ -25,6 +25,9 @@ for<br>
 ### My Contribution
 
 * My subsystem is in charge of all Inertial data (Speed, Orientation, Direction) and uses Uart, sending processed data from a BNO055 sensor, to communicate with the team.
+
+### Pages
+
 * ["Block Diagram"](https://aimoukhu.github.io/AimoukhuEGR314/02-Block-Diagram/Block-Diagram/)
 * ["Component Selection"](https://aimoukhu.github.io/AimoukhuEGR314/03-Component-Selection/Component-Selection/)
 * ["Power Budget"](https://aimoukhu.github.io/AimoukhuEGR314/07-Power-Budget/Power-Budget/)

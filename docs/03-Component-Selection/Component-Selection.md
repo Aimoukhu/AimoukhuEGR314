@@ -145,6 +145,7 @@ Rationale: The BNO055 is a strong choice because it provides modern 9-axis sensi
 Selected Model: ESP32S<br>
 Rationale: The ESP32S is built with IMU support that is vital for my sensor subsystem. It also a 32 bit microcontroller and will have greater processing power for calculating IMU sensor fusion than its 8 bit counterparts.
 
+### Final Selections
 
 | Subsystem        | Component Name | Manufacturer        | Key Function                         |
 | ---------------- | -------------- | ------------------- | ------------------------------------ |
@@ -152,6 +153,7 @@ Rationale: The ESP32S is built with IMU support that is vital for my sensor subs
 | Sensor           | BNO055         | Bosch Sensortec     | Provides 9-axis IMU data + fusion    |
 | Microcontroller  | ESP32-S3       | Espressif Systems   | Main processing & communication unit |
 
+### Pinout
 
 | Pin Number | GPIO   | Function       | Connected Component      |
 | ---------- | ------ | -------------- | ------------------------ |

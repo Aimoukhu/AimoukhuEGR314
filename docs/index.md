@@ -7,27 +7,30 @@ tags:
 <center>
 <font size= "6">Andrew Imoukhuede Datasheet</font><br>
 as part of<br>
-<font size= "8"> Project Name</font><br>
+<font size= "8"> Rugged Surveyor</font><br>
 for<br>
 <font size= "5"> Team 308 </font><br>
 
-**Submission: Jan, 18, 2026**
+**Submission: May 04, 2026**
 </center>
 
 ## Introduction
 
-* **This needs to be updated so that a reader gets an idea of the purpose of this datasheet.**
+* This datasheet is to helpcreate the Inertial Measurement System for the Rugged surveyor.The goal of the IMU is to ensure the robot can determine its position and orientation in three-dimensional space, enabling controlled movement such as maintaining a straight path, executing precise turns, and stabilizing itself against underwater disturbances like currents. This will be accomplished using sensors such as an accelerometer, gyroscope, and magnetometer integrated into a single IMU module, along with onboard processing to fuse the sensor data into reliable orientation estimates.
 
 ### Project Summary
 
-* This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.
-* Add context that ties into the link to your [team report.](https://egr314-s-2026-308.github.io/)
+* This project is to create a modular rover of any kind. My team has opted to design an underwater exploration rover able to gather temperature and light data in extreme marine conditions.
 
 ### My Contribution
 
-* This needs to be updated to reflect a team introduction
-* Content should also help an unfamiliar reader navigate to areas of interest. Information like:
+* My subsystem is in charge of all Inertial data (Speed, Orientation, Direction) and uses Uart, sending processed data from a BNO055 sensor, to communicate with the team.
+* ["Block Diagram"](https://aimoukhu.github.io/AimoukhuEGR314/02-Block-Diagram/Block-Diagram/)
+* ["Component Selection"](https://aimoukhu.github.io/AimoukhuEGR314/03-Component-Selection/Component-Selection/)
+* ["Power Budget"](https://aimoukhu.github.io/AimoukhuEGR314/Appendix/03-Power-Budget/Power-Budget/)
+* ["Schematic"](https://aimoukhu.github.io/AimoukhuEGR314/07-Schematic/schematic/)
+* ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
+* ["API "](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
+* ["Reflection"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
+* ["Hardware v2"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/) section of the datasheet.
-
->Continue for all the remaining/missing sections.

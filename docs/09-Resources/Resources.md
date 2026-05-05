@@ -2,7 +2,7 @@
 title: Resources
 ---
 
-* [*ESP32 Code Project*](https://aimoukhu.github.io/AimoukhuEGR314/02-Block-Diagram/Block-Diagram/)
+* [*ESP32 Code Project*](ESP Code.zip)
 
 * [*Rover Operation*](https://youtube.com/shorts/qLsyMYMwPKg?si=ZeHaT_bnWuoLQgjC)
 

@@ -650,6 +650,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#final-selections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Selections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinout
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -921,6 +939,24 @@
   <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
       MicroController
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-selections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Selections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinout
     </span>
   </a>
   
@@ -1245,6 +1281,92 @@ Rationale: The BNO055 is a strong choice because it provides modern 9-axis sensi
 </ol>
 <p>Selected Model: ESP32S<br>
 Rationale: The ESP32S is built with IMU support that is vital for my sensor subsystem. It also a 32 bit microcontroller and will have greater processing power for calculating IMU sensor fusion than its 8 bit counterparts.</p>
+<h3 id="final-selections">Final Selections</h3>
+<table>
+<thead>
+<tr>
+<th>Subsystem</th>
+<th>Component Name</th>
+<th>Manufacturer</th>
+<th>Key Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power Management</td>
+<td>AP63203WU-7</td>
+<td>Diodes Incorporated</td>
+<td>Steps down input voltage to 3.3V</td>
+</tr>
+<tr>
+<td>Sensor</td>
+<td>BNO055</td>
+<td>Bosch Sensortec</td>
+<td>Provides 9-axis IMU data + fusion</td>
+</tr>
+<tr>
+<td>Microcontroller</td>
+<td>ESP32-S3</td>
+<td>Espressif Systems</td>
+<td>Main processing &amp; communication unit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pinout">Pinout</h3>
+<table>
+<thead>
+<tr>
+<th>Pin Number</th>
+<th>GPIO</th>
+<th>Function</th>
+<th>Connected Component</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>GPIO12</td>
+<td>Digital Output</td>
+<td>Status LED</td>
+</tr>
+<tr>
+<td>41</td>
+<td>GPIO41</td>
+<td>I2C SDA</td>
+<td>BNO055 IMU</td>
+</tr>
+<tr>
+<td>42</td>
+<td>GPIO42</td>
+<td>I2C SCL</td>
+<td>BNO055 IMU</td>
+</tr>
+<tr>
+<td>36</td>
+<td>GPIO36</td>
+<td>UART RX</td>
+<td>Upstream Communication</td>
+</tr>
+<tr>
+<td>37</td>
+<td>GPIO37</td>
+<td>UART TX</td>
+<td>Downstream Communication</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>—</td>
+<td>Ground</td>
+<td>Common Ground</td>
+</tr>
+<tr>
+<td>3.3V</td>
+<td>—</td>
+<td>Power Output</td>
+<td>IMU + other components</td>
+</tr>
+</tbody>
+</table>
 
 
 

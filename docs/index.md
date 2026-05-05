@@ -27,10 +27,11 @@ for<br>
 * My subsystem is in charge of all Inertial data (Speed, Orientation, Direction) and uses Uart, sending processed data from a BNO055 sensor, to communicate with the team.
 * ["Block Diagram"](https://aimoukhu.github.io/AimoukhuEGR314/02-Block-Diagram/Block-Diagram/)
 * ["Component Selection"](https://aimoukhu.github.io/AimoukhuEGR314/03-Component-Selection/Component-Selection/)
-* ["Power Budget"](https://aimoukhu.github.io/AimoukhuEGR314/Appendix/03-Power-Budget/Power-Budget/)
+* ["Power Budget"](https://aimoukhu.github.io/AimoukhuEGR314/07-Power-Budget/Power-Budget/)
 * ["Schematic"](https://aimoukhu.github.io/AimoukhuEGR314/07-Schematic/schematic/)
-* ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
-* ["API "](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
+* ["PCB"](https://aimoukhu.github.io/AimoukhuEGR314/06-PCB/pcb/)
+* ["BOM"](https://aimoukhu.github.io/AimoukhuEGR314/05-BOM/BOM/)
+* ["API "](https://aimoukhu.github.io/AimoukhuEGR314/04-API/API/)
 * ["Reflection"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
 * ["Hardware v2"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/)
 

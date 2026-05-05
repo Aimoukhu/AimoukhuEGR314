@@ -9,9 +9,9 @@ tags:
 Bil of Materials for the Inertial Measurement Unit Subsystem of the Rugged Industrial Surveyor
 
 
-## Bill of Materials (Example as Image)
+## Bill of Materials 
 ![](BOM.png)
-**Figure ##:** Bill of Materials as a screenshot.
+**Figure ##:** Bill of Materials.
 
 ## Resouce
 

@@ -16,7 +16,7 @@ I took the main components of the Inertial Measurement Unit Subsystem and found 
 
 ## Conclusions
 
-From the prepare Power Budget, .....
+From the prepare Power Budget, I listed each major component (ESP32 and IMU) and summing their maximum current draw on the 3.3V rail. Then I added a safety margin to account for spikes , giving a total required current of about 1275 mA. This helped me verify that the selected regulator (2A max) and external supply can handle the load. The conclusion is that the system has sufficient power capacity with extra room for future expansion.
 
 ## Resouces
 
